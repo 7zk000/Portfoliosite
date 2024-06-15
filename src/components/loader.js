@@ -3,7 +3,6 @@ import './loader.css';
 
 const Loader = () => {
   return <div className="loader">
-
 		<div class="socket">
 			<div class="gel center-gel">
 				<div class="hex-brick h1"></div>
@@ -192,9 +191,7 @@ const Loader = () => {
 				<div class="hex-brick h2"></div>
 				<div class="hex-brick h3"></div>
 			</div>
-
 		</div>
-
   </div>;
 };
 

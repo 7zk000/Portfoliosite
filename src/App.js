@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from './components/button';
 import Loader from './components/loader';
+import { Contacts, Projects, Skills, About } from './components/pages';
 
 const App = () => {
   const [selectedSection, setSelectedSection] = useState('');
@@ -21,11 +22,14 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div id="particles">
       <h1>My Portfolio</h1>
       <Button onButtonClick={handleButtonClick} />
       <div>
-        {selectedSection && <h2>{selectedSection} Section</h2>}
+        {selectedSection === 'Contacts' && <Contacts />}
+        {selectedSection === 'Projects' && <Projects />}
+        {selectedSection === 'Skills' && <Skills />}
+        {selectedSection === 'About' && <About />}
       </div>
     </div>
   );
