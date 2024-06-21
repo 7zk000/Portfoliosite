@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Button from './components/button';
 import Loader from './components/loader';
 import { Contacts, Projects, Skills, About } from './components/pages';
+import logo from './images/favicon.jpg';
+import './App.css';
 
 const App = () => {
   const [selectedSection, setSelectedSection] = useState('');
@@ -23,9 +25,13 @@ const App = () => {
 
   return (
     <div id="particles">
-      <h1>My Portfolio</h1>
-      <Button onButtonClick={handleButtonClick} />
-      <div>
+      <div className="header">
+        {/* <img src={logo} alt='logo' className='logo' /> */}
+        <h1>My Portfolio</h1>
+      </div>
+
+        <Button onButtonClick={handleButtonClick} />
+      <div className='content'>
         {selectedSection === 'Contacts' && <Contacts />}
         {selectedSection === 'Projects' && <Projects />}
         {selectedSection === 'Skills' && <Skills />}
